@@ -1,0 +1,790 @@
+/*
+-------------------------------------------------
+  Theme Name: Chat-bot- Admin Dashboard Template
+  Theme URL: 
+  Author: bdcoder
+  Author URL: https://themeforest.net/user/bdcoders/portfolio
+  Creation Date: 5-11-2024
+  Description:A default style sheet for Chat-bot- Admin Dashboard Template
+  Version: 1.00
+
+
+  ---------------------------------------------------
+  Developed By: bdcoder
+  Developer URL: amitpaultl@gmail.com
+  Developer: Amit Paul
+
+  ---------------------------------------------------
+
+  --------------------------------------------------
+  Table of Contents
+  --------------------------------------------------
+  1. General CSS
+  2. Typography CSS
+  3. Button CSS
+  4. Preloader Area Start
+  5. Navbar CSS
+  6. Dashboard Page
+  7. Sign Up Page
+  8. Empty Properties Page
+  9. All Property Page
+  10. Property Details Page
+  11. Add Property Page 
+  12. Tenants Page
+  13. Add Tenants Page
+  14. Dashboard Inner Dashboard Layout
+  15. Tenants Details Page
+  16. Billing Center Page
+  17. Documents Page
+  18. Invoice Preview
+  19. Uploaded Documents Common
+  20. Tickets Page CSS
+  21. Default Settings Page
+  22. Color Settings Page
+  23. Tenant Portal Dashboard Page
+  24. Tenant Portal Invoice Details Page
+  25. Tenant Portal Documents Page
+  26. Maintainer Portal Chat Page
+  27. Responsive CSS
+
+------------------------------------------------ */
+
+/*--------------------------------
+1 Theme Color
+-----------------------------------*/
+:root {
+    --primary: #104FCF;
+    --primary-gradient:linear-gradient(236deg, #2080FF 20.97%, #1B5CEC 58.23%, #104FCF 93.37%);
+    --background-dark: #040C23;
+    --tiles-dark: #08112C;
+    --stroke: #203676;
+    --stroke-gradient: linear-gradient(0deg, rgba(10,68,186,1) 0%, rgba(8,27,75,1) 15%, rgba(8,22,62,1) 49%, rgba(8,23,65,1) 86%, rgba(23,84,253,1) 100%);
+    --placeholder: #4F5F8A;
+    --paragraph: #ABBAE0;
+    --title-light: #E9EFFF;
+    --input-field-bg: #091434;
+    --White: #fff;
+    --danger: #CD4545;
+    --warning: #E0A800;
+    --success: #5CFFB0;
+    --upper-tiles: #0D1A40;
+    --body-font-family:  "Rubik", sans-serif;
+}
+
+
+
+/*-----------------------------------------------
+    2. General Style Start
+-------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: var(--background-dark) none repeat scroll;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: var(--body-font-family);
+    color: var(--paragraph);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--paragraph);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+p{
+    color: var(--paragraph);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.24px;
+    margin: 0;
+
+}
+
+
+/*-------------------------------------------
+    3.Typography area start
+-------------------------------------------*/
+
+/* color text */
+
+.title-light{
+    color: var(--title-light);
+}
+
+.paragraph-text{
+    color: var(--paragraph);
+}
+
+.primary{
+    color: var(--primary);
+}
+
+.warning{
+    color: var(--warning);
+}
+
+.danger{
+    color: var(--danger);
+}
+
+.success{
+    color: var(--success);
+}
+
+.placeholder-color{
+    color: var(--placeholder);
+}
+
+/* background color */
+
+.primary-gradient-bg{
+    background: var(--primary-gradient);
+}
+
+.white-bg{
+    background: var(--White);
+}
+
+.warning-bg{
+    background: var(--warning);
+}
+
+/* font size  */
+
+.bda-fs-45{
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 0.32px;
+}
+
+.bda-fs-28{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.32px;
+}
+
+.bda-fs-20{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.24px;
+}
+
+.bda-fs-18{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.24px;
+}
+
+.bda-fs-16{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.24px;
+}
+
+/* font weight  */
+
+.bda-fw-300{
+    font-weight: 300;
+}
+
+.bda-fw-400{
+    font-weight: 400;
+}
+
+.bda-fw-500{
+    font-weight: 500;
+}
+
+.bda-fw-600{
+    font-weight: 600;
+}
+
+.bda-fw-700{
+    font-weight: 700;
+}
+
+.bda-fw-800{
+    font-weight: 800;
+}
+
+.bda-fw-900{
+    font-weight: 900;
+}
+
+
+/* margin area start */
+
+.bda-mb-30{
+    margin-bottom: 30px;
+}
+
+.bda-mb-50{
+    margin-bottom: 50px;
+}
+
+.bda-mb-10{
+    margin-bottom: 10px;
+}
+.bda-mt-10{
+    margin-top: 10px;
+}
+
+.bda-mb-6{
+    padding-bottom: 6px !important;
+}
+
+/* padding area start */
+
+.bda-px-18{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.bda-pt-30{
+    padding-top: 30px;
+}
+
+.bda-pb-100{
+    padding-bottom: 100px;
+}
+
+/* border */
+
+.bda-border-1{
+    border: 1px solid var(--title-light) !important;
+}
+
+.bda-border-top{
+    border-top: 1px solid var(--stroke) !important;
+}
+.bda-border-bottom{
+    border-bottom: 1px solid var(--stroke) !important;
+}
+
+/* gab */
+
+.bda-gab-10{
+    gap: 10px;
+}
+
+.bda-gab-30{
+    gap: 30px;
+}
+
+
+/*-------------------------------------------
+    3.Typography area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    4.button area start
+-------------------------------------------*/
+
+.bda-btu-theme{
+    position: relative;
+    padding: 15px 20px;
+    z-index: 1;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; 
+    letter-spacing: 0.27px;
+    border-radius: 13px;
+    display: inline-block;
+    border: none;
+    transition: .4s;
+    background: var(--primary-gradient);
+    color: var(--title-light);
+}
+
+.bda-btu-theme:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 13px;
+    padding: 2px;
+    background: linear-gradient(201deg, #fff, #ff00ff00, #0000ff0a, #00ffff03, #ffffff00);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.bda-btu-theme-border{
+    position: relative;
+    padding: 15px 20px;
+    z-index: 1;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; 
+    letter-spacing: 0.27px;
+    border-radius: 13px;
+    display: inline-block;
+    border: none;
+    transition: .4s;
+    background: none;
+}
+
+/*-------------------------------------------
+    4.button area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    4.dashboard area start
+-------------------------------------------*/
+
+.bda-breadcrumb .breadcrumb-item.active {
+    color: var(--paragraph);
+}
+
+.bda-breadcrumb .breadcrumb-item::before {
+    color: var(--title-light);
+}
+
+.bda-card-box {
+    border-radius: 20px;
+    background: var(--upper-tiles);
+    padding: 30px;
+    margin-bottom: 24px;
+}
+
+.bda-text-box-dashboard {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.bda-card-area-box {
+    border-radius: 30px;
+    background: var(
+    --tiles-dark);
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.bda-card-area-box:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(194deg, #0A44BA, #ff00ff00, #0000ff0a, #00ffff03, #0A44BA);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.bda-chart-text svg> text {
+    font-size: 23px !important;
+    font-weight: 600;
+    padding-top: 16px;
+    fill: var(--title-light)
+}
+
+text.apexcharts-text.apexcharts-yaxis-label, text.apexcharts-text.apexcharts-xaxis-label {
+    fill: var(--paragraph);
+}
+
+span.apexcharts-legend-text {
+    color: var(--paragraph) !important;
+}
+
+text.apexcharts-text , text.apexcharts-xaxis-label{
+    fill: var(--paragraph);
+}
+
+g.apexcharts-radar-series.apexcharts-plot-series line{
+    stroke: var(--primary);
+}
+
+.apexcharts-menu {
+    background: var(--tiles-dark) !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--paragraph);
+}
+.apexcharts-menu-item:hover{
+    background: var(--upper-tiles) ;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+    background: var(--tiles-dark) !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--paragraph);
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+    background: var(--tiles-dark) !important;
+    border-bottom: 1px solid var(--primary) !important;
+}
+
+.apexcharts-xaxistooltip, .apexcharts-yaxistooltip {
+    color: var(--paragraph) !important;
+    background: var(--tiles-dark) !important;
+    border: 1px solid var(--primary) !important;
+}
+
+
+/*-------------------------------------------
+    4.dashboard area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    5.user area start
+-------------------------------------------*/
+
+.bda-table-search {
+    padding: 10px 20px;
+    border: 1px solid var(--placeholder);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 350px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.bda-table-search input {
+    background: none;
+    color: var(--placeholder);
+    width: 100%;
+}
+
+.bda-btu-search {
+    background: var(--primary-gradient);
+    border-radius: 8px;
+    width: 40px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bda-btu-search img {
+    width: 16px;
+    height: 16px;
+}
+
+.bda-table-search input::placeholder {
+    color: var(--placeholder);
+    opacity: 1; 
+}
+
+
+.bda-data-table-box tbody, .bda-data-table-box td, .bda-data-table-box tfoot, .bda-data-table-box th, .bda-data-table-box thead, .bda-data-table-box tr{
+    background: none;
+    color: var(--paragraph);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.27px;
+    padding: 20px 30px !important;
+
+}
+
+.bda-data-table-box th {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: var(--title-light);
+    border-right: 1px solid var(--placeholder);
+    border-bottom: 1px solid var(--placeholder) !important;
+}
+
+.bda-data-table-box td{
+    border-right: 1px solid var(--placeholder);
+    border-bottom: 1px solid var(--placeholder);
+}
+
+.bda-data-table-box{
+    border-collapse: separate;
+    border-radius: 20px;
+    border: 1px solid var(--placeholder) !important;
+}
+
+.bda-data-table-box th:last-child, .bda-data-table-box td:last-child {
+    border-right: none;
+  }
+
+.bda-data-table-box tbody tr:last-child th, .bda-data-table-box tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+
+.bda-show-btu-acton {
+    border-radius: 8px;
+    background: var(--stroke);
+    width: 37px;
+    height: 38.049px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.bda-acton-area-table {
+    display: flex;
+    gap: 20px;
+}
+
+.bda-delete-btu-acton {
+    border-radius: 8px;
+    background: rgba(205, 69, 69, 0.25);
+    width: 37px;
+    height: 38.049px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.bda-show-btu-acton:hover {
+    background: var(--placeholder);
+}
+
+.bda-delete-btu-acton:hover {
+    background: #765a849e;
+}
+
+.dt-length {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+    align-items: center;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+div.dt-container .dt-input {
+    padding: 15px 20px !important;
+    color: var(--title-light) !important;
+    background: var(--tiles-dark);
+    border: 1px solid var(--placeholder) !important;
+    border-radius: 13px !important;
+}
+
+div#data-table-box_info, button.dt-paging-button.last {
+    display: none !important;
+}
+
+.dt-paging-button.first{
+    visibility: hidden;
+}
+
+.dt-paging-button.current {
+    color: var(--title-light) !important;
+    background: var(--primary-gradient) !important;
+    border-radius: 13px !important;
+}
+
+button.dt-paging-button {
+    border: 1px solid var(--placeholder) !important;
+    border-radius: 13px !important;
+    margin-left: 10px !important;
+    transition: .3s;
+}
+
+button.dt-paging-button:hover {
+    color: var(--title-light) !important;
+    background: var(--primary-gradient) !important;
+    border-radius: 13px !important;
+}
+
+button.dt-paging-button.disabled.previous, button.dt-paging-button.disabled.next {
+    border: none !important;
+}
+
+button.dt-paging-button.disabled.next, button.dt-paging-button.disabled.previous {
+    visibility: hidden;
+}
+
+div.dt-container div.dt-layout-row {
+    margin:  0;
+}
+
+.bda-table-area {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 999;
+}
+
+.dt-paging {
+    margin-top: 30px;
+}
+
+.bda-w-1300{
+    min-width: 1300px;
+}
+
+
+/*-------------------------------------------
+    5. user area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    6. from-control area end
+-------------------------------------------*/
+
+.bda-text-label {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    display: block; 
+    margin-bottom: 20px;
+}
+
+.bda-from-control {
+    border-radius: 13px;
+    border: 1px solid var(--stroke);
+    width: 100%;
+    background: var(--input-field-bg);
+    padding: 15px 20px;
+
+    color: var(--placeholder);
+}
+
+.bda-from-box{
+    margin-bottom: 30px;
+}
+
+.bda-from-control::placeholder{
+    color: var(--placeholder);
+}
+
+.avatar-preview {
+  width: 156px;
+  height: 156px;
+  border-radius: 13px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid var(--placeholder);
+  background-image: url('../images/uplod-logo.png');
+  cursor: pointer;
+}
+
+.bda-from-control:focus{
+    border: 1px solid var(--primary);
+    box-shadow: 0px 5px 15px 0px rgba(10, 56, 186, 0.30);
+
+}
+
+/*-------------------------------------------
+    6. from-control area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    6. Tickets area start
+-------------------------------------------*/
+
+.bda-base {
+    color: var(--stroke);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/*-------------------------------------------
+    6. Tickets area end
+-------------------------------------------*/
+
+
+
+
+  
+
+  .bda-tickets-list .bda-tickets {
+    position: absolute;
+    left: -9999px;
+  }
+
+
+  .bda-tickets-list span {
+    display: flex;
+    align-items: center;
+    border-radius: 99em;
+    transition: 0.25s ease;
+  }
+
+  .bda-tickets-list span:before {
+    display: flex;
+    flex-shrink: 0;
+    content: "";
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: 0.25s ease;
+    border: 2px solid var(--stroke);
+    margin-right: 10px;
+  }
+
+  .bda-tickets-list .bda-tickets:checked + span:before { 
+        box-shadow: inset 0 0 0 4px var(--background-dark);
+        background: var(--primary-gradient);
+        border: 2px solid var(--primary);
+
+  }
+
+
+
+
+
+
+  

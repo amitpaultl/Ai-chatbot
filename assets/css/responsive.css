@@ -1,0 +1,22 @@
+
+
+@media (max-width: 425.98px) {
+    .bda-dropdown-box {
+        width: 327px;
+        padding: 20px;
+    }
+
+    .bda-single-massage {
+        gap: 18px;
+    }
+
+    .bda-w-70-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user-img-dropdown {
+        width: 70px;
+        height: 70px;
+    }
+}
